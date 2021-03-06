@@ -1,18 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './App.scss';
-
-import { Canvas, useFrame } from 'react-three-fiber';
-
+import CustomBox from './components/CustomBox';
+import Table from './components/Table';
 function App() {
   return (
     //React fragment containing canvas which contains three js elements
     <>
-      <Canvas>
-        <mesh>
-          <circleBufferGeometry attach='geometry' args={[1, 40]}/>
-          <meshStandardMaterial attach="material"/>
-        </mesh>
-      </Canvas>
+      <Table/>
+      <CustomBox/>
     </>
   );
 }
