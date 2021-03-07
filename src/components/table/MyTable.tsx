@@ -6,6 +6,7 @@ export default function MyTable(props: any) {
   const [months, setMonths] = useState([])
   const [names, setNames] = useState([])
   const [data, setData] = useState([])
+  const [test, setTest] = useState(true)
 
   //set state for months, names & data from props
   useEffect(() => {
@@ -45,10 +46,10 @@ export default function MyTable(props: any) {
                 return(
                   <TableRow key={index}>
                     <TableCell>{value}</TableCell>
-                    <TableCell>{data[0][index]}</TableCell>
-                    <TableCell>{data[1][index]}</TableCell>
-                    <TableCell>{data[2][index]}</TableCell>
-                    <TableCell>{data[3][index]}</TableCell>
+                    <TableCell id={props.tokyo ? "selectedCell" : ""}>{data[0][index]}</TableCell>
+                    <TableCell id={props.newYork ? "selectedCell" : ""}>{data[1][index]}</TableCell>
+                    <TableCell id={props.london ? "selectedCell" : ""}>{data[2][index]}</TableCell>
+                    <TableCell id={props.berlin ? "selectedCell" : ""}>{data[3][index]}</TableCell>
                   </TableRow>
                 )
               })}
