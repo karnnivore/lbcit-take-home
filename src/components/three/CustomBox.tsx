@@ -48,6 +48,8 @@ export default function CustomBox(props: any) {
         <CustomText position={[-20, 2, 0]} text='New York' color='red' setTableBold={props.setNewYork}/>
         <CustomText position={[5, 5, 0]} text='London' color='blue' setTableBold={props.setLondon}/>
         <CustomText position={[5, 1, 4]} text='Berlin' color='green' setTableBold={props.setBerlin}/>
+        <CustomText position={[-15, -2, 0]} text="Nick" color='pink' setTableBold={props.setTokyo}/>
+        <CustomText position={[6, -2, 0]} text="Chinsen" color='pink' setTableBold={props.setTokyo}/>
         {/* Display custom spinning box */}
         <SpinningBox position={[-1.2, 0, 0]} color='purple' setTableBold={props.setTokyo}/>
         <SpinningBox position={[2.1, 0, 0]} color='red' setTableBold={props.setNewYork}/>
