@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# Take Home project 
+Created using React, React Three Fiber, and TypeScript
 
 ## Learn More About Nick
 
