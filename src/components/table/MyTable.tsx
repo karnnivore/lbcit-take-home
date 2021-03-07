@@ -6,7 +6,6 @@ export default function MyTable(props: any) {
   const [months, setMonths] = useState([])
   const [names, setNames] = useState([])
   const [data, setData] = useState([])
-  const [test, setTest] = useState(true)
 
   //set state for months, names & data from props
   useEffect(() => {
