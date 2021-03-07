@@ -21,14 +21,19 @@ export default function SpinningBox(props: any) {
       position={props.position}
       ref={mesh}
       scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
-      onClick={e => setActive(!active)}
+      onClick={e => {
+        setActive(!active)
+        window.open(props.link)
+      }}
       onPointerOver={e => { 
         setHover(true)
         props.setTableBold(true)
+        setActive(true)
       }}
       onPointerOut={e => {
         setHover(false)
         props.setTableBold(false)
+        setActive(false)
       }}
       castShadow
     >

@@ -19,14 +19,19 @@ export default function CustomText(props: any) {
     <mesh
       position={props.position}
       scale={active ? [.8, .8, .8] : [.5, .5, .5]}
-      onClick={e => setActive(!active)}
+      onClick={e => {
+        setActive(!active)
+        window.open(props.link)
+      }}
       onPointerOver={e => { 
         setHover(true)
         props.setTableBold(true)
+        setActive(true)
       }}
       onPointerOut={e => {
         setHover(false)
         props.setTableBold(false)
+        setActive(false)
       }}
     >
       <textGeometry attach='geometry' args={[props.text, textOptions]}/>
