@@ -9,7 +9,7 @@ export default function SpinningBox(props: any) {
   //state for hovered/active
   const [hovered, setHover] = useState(false)
   const [active, setActive] = useState(false)
-  
+
   //rotate object
   useFrame(() => {
     if (mesh.current !== undefined) {
@@ -22,8 +22,14 @@ export default function SpinningBox(props: any) {
       ref={mesh}
       scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
       onClick={e => setActive(!active)}
-      onPointerOver={e => setHover(true)}
-      onPointerOut={e => setHover(false)}
+      onPointerOver={e => { 
+        setHover(true)
+        props.setTableBold(true)
+      }}
+      onPointerOut={e => {
+        setHover(false)
+        props.setTableBold(false)
+      }}
       castShadow
     >
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />

@@ -44,15 +44,15 @@ export default function CustomBox(props: any) {
           <shadowMaterial attach='material' opacity={0.5}/>
         </mesh>
         {/* Display custom text */}
-        <CustomText position={[-15, 5, 0]} text='Tokyo' color='purple' setTableBold={props.setNewYork}/>
+        <CustomText position={[-15, 5, 0]} text='Tokyo' color='purple' setTableBold={props.setTokyo}/>
         <CustomText position={[-20, 2, 0]} text='New York' color='red' setTableBold={props.setNewYork}/>
-        <CustomText position={[5, 5, 0]} text='London' color='blue' setTableBold={props.setNewYork}/>
-        <CustomText position={[5, 1, 4]} text='Berlin' color='green' setTableBold={props.setNewYork}/>
+        <CustomText position={[5, 5, 0]} text='London' color='blue' setTableBold={props.setLondon}/>
+        <CustomText position={[5, 1, 4]} text='Berlin' color='green' setTableBold={props.setBerlin}/>
         {/* Display custom spinning box */}
-        <SpinningBox position={[-1.2, 0, 0]} color='purple'/>
-        <SpinningBox position={[2.1, 0, 0]} color='red'/>
-        <SpinningBox position={[4, 1, 4]} color='blue'/>
-        <SpinningBox position={[-4, 1, 4]} color='green'/>
+        <SpinningBox position={[-1.2, 0, 0]} color='purple' setTableBold={props.setTokyo}/>
+        <SpinningBox position={[2.1, 0, 0]} color='red' setTableBold={props.setNewYork}/>
+        <SpinningBox position={[4, 1, 4]} color='blue' setTableBold={props.setLondon}/>
+        <SpinningBox position={[-4, 1, 4]} color='green' setTableBold={props.setBerlin}/>
       </group>
 
       {/* Allows you to move camera */}
