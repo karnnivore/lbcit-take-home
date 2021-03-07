@@ -1,0 +1,16 @@
+.tableDiv {
+  height: 0px;
+}
+
+#tblContainer {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+#tblHead tr th {
+  font-weight: bold;
+}
+
+#tblBody tr td:first-of-type{
+  font-weight: bold
+}
